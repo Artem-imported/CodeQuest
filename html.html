@@ -3,9 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CodeQuest - Главная</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1f1f1f;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #ffcc00;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #e0e0e0;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2, h3 {
+            color: #ffcc00;
+        }
+
+        pre {
+            background-color: #1f1f1f;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        button {
+            background-color: #ffcc00;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            color: #121212;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #e0e0e0;
+        }
+
+        footer {
+            background-color: #1f1f1f;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+    </style>
 </head>
 <body>
-    <p>Waiting for update...</p>
+    <header>
+        <h1>CodeQuest</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О игре</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="intro">
+            <h2>Добро пожаловать в CodeQuest!</h2>
+            <p>Изучайте HTML, JavaScript и CSS с помощью интерактивных тестов и заданий.</p>
+        </section>
+        <section id="html-learning">
+            <h2>Изучение HTML</h2>
+            <div class="example">
+                <h3>Пример кода</h3>
+                <p>Создание простого HTML-документа:</p>
+                <pre><code>
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Мой первый HTML</title>
+                    </head>
+                    <body>
+                        <h1>Привет, мир!</h1>
+                        <p>Это мой первый HTML-документ.</p>
+                    </body>
+                    </html>
+                </code></pre>
+            </div>
+            <div class="quiz">
+                <h3>Тест по HTML</h3>
+                <p>Какой тег используется для создания гиперссылки?</p>
+                <button onclick="checkAnswer('a')">A. &lt;a&gt;</button>
+                <button onclick="checkAnswer('b')">B. &lt;link&gt;</button>
+                <button onclick="checkAnswer('c')">C. &lt;href&gt;</button>
+                <p id="quiz-result"></p>
+            </div>
+            <div class="task">
+                <h3>Задание</h3>
+                <p>Создайте HTML-документ с заголовком и параграфом.</p>
+                <!-- Здесь можно добавить текстовое поле или редактор для выполнения задания -->
+            </div>
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <script src="./script.js"></script>
 </body>
 </html>

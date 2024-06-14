@@ -26,3 +26,17 @@ document.getElementById('about-game').addEventListener('click', function() {
     alert('О игре: CodeQuest - это приключенческая игра для изучения программирования.');
     // Здесь можно добавить больше информации об игре
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Функция для проверки ответа на тест
+    window.checkAnswer = function(answer) {
+        const resultElement = document.getElementById('quiz-result');
+        if (answer === 'a') {
+            resultElement.textContent = 'Правильно! Тег <a> используется для создания гиперссылки.';
+            resultElement.style.color = 'green';
+        } else {
+            resultElement.textContent = 'Неправильно. Попробуйте еще раз.';
+            resultElement.style.color = 'red';
+        }
+    };
+});
