@@ -12,16 +12,22 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
     }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Функция для проверки ответа на тест
-    window.checkAnswer = function(answer) {
-        const resultElement = document.getElementById('quiz-result');
-        if (answer === 'a') {
-            resultElement.textContent = 'Правильно! Тег <a> используется для создания гиперссылки.';
-            resultElement.style.color = 'green';
-        } else {
-            resultElement.textContent = 'Неправильно. Попробуйте еще раз.';
-            resultElement.style.color = 'red';
-        }
+function checkAnswers() {
+    const answers = {
+        q1: 'c',
+        q2: 'b'
     };
-});
+
+    let score = 0;
+    const form = document.getElementById('quiz-form');
+    const resultDiv = document.getElementById('result');
+
+    for (const [question, answer] of Object.entries(answers)) {
+        const userAnswer = form.elements[question].value;
+        if (userAnswer === answer) {
+            score++;
+        }
+    }
+
+    resultDiv.innerHTML = `You scored ${score} out of ${Object.keys(answers).length}`;
+}

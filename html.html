@@ -62,20 +62,6 @@
             overflow-x: auto;
         }
 
-        button {
-            background-color: #ffcc00;
-            border: none;
-            padding: 10px 20px;
-            margin: 5px;
-            cursor: pointer;
-            color: #121212;
-            border-radius: 5px;
-        }
-
-        button:hover {
-            background-color: #e0e0e0;
-        }
-
         footer {
             background-color: #1f1f1f;
             text-align: center;
@@ -111,32 +97,41 @@
             <div class="example">
                 <h3>Пример кода</h3>
                 <p>Создание простого HTML-документа:</p>
-                <pre><code>
-                    <!DOCTYPE html>
-                    <html lang="en">
-                    <head>
-                        <meta charset="UTF-8">
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                        <title>Мой первый HTML</title>
-                    </head>
-                    <body>
-                        <h1>Привет, мир!</h1>
-                        <p>Это мой первый HTML-документ.</p>
-                    </body>
-                    </html>
-                </code></pre>
             </div>
             <div class="quiz">
-                <h3>Тест по HTML</h3>
-                <p>Какой тег используется для создания гиперссылки?</p>
-                <button onclick="checkAnswer('a')">A. &lt;a&gt;</button>
-                <button onclick="checkAnswer('b')">B. &lt;link&gt;</button>
-                <button onclick="checkAnswer('c')">C. &lt;href&gt;</button>
-                <p id="quiz-result"></p>
+                <div class="quiz-container">
+                    <h1>Web Quiz</h1>
+                    <form id="quiz-form">
+                        <div class="question">
+                            <p>1. What is the capital of France?</p>
+                            <input type="radio" id="q1a" name="q1" value="a">
+                            <label for="q1a">A) Berlin</label><br>
+                            <input type="radio" id="q1b" name="q1" value="b">
+                            <label for="q1b">B) Madrid</label><br>
+                            <input type="radio" id="q1c" name="q1" value="c">
+                            <label for="q1c">C) Paris</label><br>
+                            <input type="radio" id="q1d" name="q1" value="d">
+                            <label for="q1d">D) Rome</label><br>
+                        </div>
+                        <div class="question">
+                            <p>2. What is 2 + 2?</p>
+                            <input type="radio" id="q2a" name="q2" value="a">
+                            <label for="q2a">A) 3</label><br>
+                            <input type="radio" id="q2b" name="q2" value="b">
+                            <label for="q2b">B) 4</label><br>
+                            <input type="radio" id="q2c" name="q2" value="c">
+                            <label for="q2c">C) 5</label><br>
+                            <input type="radio" id="q2d" name="q2" value="d">
+                            <label for="q2d">D) 6</label><br>
+                        </div>
+                        <button type="button" onclick="checkAnswers()">Submit</button>
+                    </form>
+                    <div id="result"></div>
+                </div>
             </div>
             <div class="task">
-                <h3>Задание</h3>
-                <p>Создайте HTML-документ с заголовком и параграфом.</p>
+                <h3>Завдання</h3>
+                <p>HTML-документ с заголовком и параграфом.</p>
                 <!-- Здесь можно добавить текстовое поле или редактор для выполнения задания -->
             </div>
         </section>
